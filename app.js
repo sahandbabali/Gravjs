@@ -11,7 +11,7 @@ window.addEventListener("deviceorientation", handleOrientation, true);
       var beta     = event.beta;
       var gamma    = event.gamma;
 
-      document.getElementById("text").textContent = `${absolute}, ${alpha}, ${beta}, ${gamma}`;
+      document.getElementById("text").textContent = `${alpha}`;
       // Do stuff with the new orientation data
     }
 
