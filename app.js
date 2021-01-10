@@ -1,6 +1,6 @@
 // https://www.youtube.com/watch?v=urR596FsU68&list=PLRqwX-V7Uu6bLh3T_4wtrmVHOrOEM1ig_
 
-
+var rotationn;
 
 window.addEventListener("deviceorientation", handleOrientation, true);
 
@@ -11,7 +11,10 @@ window.addEventListener("deviceorientation", handleOrientation, true);
       var beta     = event.beta;
       var gamma    = event.gamma;
 
-      document.getElementById("text").textContent = `${alpha}`;
+
+      rotationn = alpha.toFixed(3);
+
+      document.getElementById("text").textContent = `${rotationn}`;
       // Do stuff with the new orientation data
     }
 
