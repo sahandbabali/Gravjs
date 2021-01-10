@@ -58,12 +58,11 @@ var world;
 var boxes = [];
 var ground = [];
 var grav = 1;
-var www = 300;
-var hhh = 500;
+
 
 
 function setup() {
-  document.getElementById("grav").addEventListener("click", gravvv);
+ // document.getElementById("grav").addEventListener("click", gravvv);
   createCanvas(400, 600);
   engine = Engine.create();
   world = engine.world;
