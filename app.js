@@ -62,19 +62,18 @@ var grav = 1;
 
 
 function setup() {
-      var w2 = windowWidth/2;
-var h2 = windowHeight/2;
+
   document.getElementById("grav").addEventListener("click", gravvv);
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(300, 500);
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
   ground = [
-      Bodies.rectangle(w2, 0, width, 10, { isStatic: true }),
-      Bodies.rectangle(w2, height, width, 10, { isStatic: true }),
-       Bodies.rectangle(0, h2, 10, height, { isStatic: true }),
+      Bodies.rectangle(150, 0, width, 10, { isStatic: true }),
+      Bodies.rectangle(150, height, width, 10, { isStatic: true }),
+       Bodies.rectangle(0, 250, 10, height, { isStatic: true }),
       
-        Bodies.rectangle(width, h2, 10, height, { isStatic: true }),
+        Bodies.rectangle(width, 250, 10, height, { isStatic: true }),
 ];
   World.add(world, ground);
   //console.log(boxA);
