@@ -56,16 +56,20 @@ var Engine = Matter.Engine,
 var engine;
 var world;
 var boxes = [];
-var ground;
+var ground = [];
 var grav = 1;
 
 function setup() {
   document.getElementById("grav").addEventListener("click", gravvv);
-  createCanvas(400, 700);
+  createCanvas(300, 500);
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
-  ground = Bodies.rectangle(400, 300, 400, 10, { isStatic: true });
+  ground = [Bodies.rectangle(0, 500, 300, 10, { isStatic: true }),
+      Bodies.rectangle(0, 0, 300, 10, { isStatic: true }),
+      Bodies.rectangle(0, 0, 10, 500, { isStatic: true }),
+      Bodies.rectangle(0, 300, 10, 500, { isStatic: true }),
+];
   World.add(world, ground);
   //console.log(boxA);
 }
