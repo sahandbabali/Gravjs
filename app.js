@@ -6,7 +6,7 @@
 
 
 function motion(event){
-      document.getElementById("text").textContent = `event.accelerationIncludingGravity.x + event.accelerationIncludingGravity.y`;
+      document.getElementById("text").textContent = `${event.accelerationIncludingGravity.x} + ${event.accelerationIncludingGravity.y}`;
     }
 
 
