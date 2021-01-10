@@ -2,11 +2,8 @@
 
 
 
-if(window.DeviceMotionEvent){
       window.addEventListener("devicemotion", motion, false);
-    }else{
-      console.log("DeviceMotionEvent is not supported");
-}
+
 
 function motion(event){
       document.getElementById("text").textContent = `event.accelerationIncludingGravity.x + event.accelerationIncludingGravity.y`;
