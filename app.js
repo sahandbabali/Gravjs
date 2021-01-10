@@ -12,13 +12,13 @@ window.addEventListener("deviceorientation", handleOrientation, true);
       var gamma    = event.gamma;
 
 
-      rotationn = alpha.toFixed(0);
 
-    //  document.getElementById("text").textContent = `${rotationn}`;
+      var xg = map(beta, -180, 180, -1, 1)
+      var yg = map(gamma, -90, 90, -1, 1)
 
 
-      engine.world.gravity.x = Math.sin(rotationn);
-      engine.world.gravity.y = Math.cos(rotationn);
+      engine.world.gravity.x =  xg;
+      engine.world.gravity.y = yg;
 
       // Do stuff with the new orientation data
     }
