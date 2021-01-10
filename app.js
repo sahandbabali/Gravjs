@@ -58,6 +58,9 @@ var world;
 var boxes = [];
 var ground = [];
 var grav = 1;
+var www = 300;
+var hhh = 500;
+
 
 function setup() {
   document.getElementById("grav").addEventListener("click", gravvv);
@@ -65,10 +68,12 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
-  ground = [Bodies.rectangle(0, 500, 300, 10, { isStatic: true }),
-      Bodies.rectangle(0, 0, 300, 10, { isStatic: true }),
-      Bodies.rectangle(0, 0, 10, 500, { isStatic: true }),
-      Bodies.rectangle(0, 300, 10, 500, { isStatic: true }),
+  ground = [
+      Bodies.rectangle(0, 150, 300, 10, { isStatic: true }),
+      Bodies.rectangle(500, 150, 300, 10, { isStatic: true }),
+      Bodies.rectangle(0, 250, 10, 500, { isStatic: true }),
+      
+      Bodies.rectangle(300, 250, 10, 500, { isStatic: true }),
 ];
   World.add(world, ground);
   //console.log(boxA);
