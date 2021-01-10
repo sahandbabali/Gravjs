@@ -69,11 +69,11 @@ function setup() {
   world = engine.world;
   Engine.run(engine);
   ground = [
-      Bodies.rectangle(0, 150, 300, 10, { isStatic: true }),
-      Bodies.rectangle(500, 150, 300, 10, { isStatic: true }),
-      Bodies.rectangle(0, 250, 10, 500, { isStatic: true }),
+      Bodies.rectangle(150, 0, width, 10, { isStatic: true }),
+      Bodies.rectangle(150, height, width, 10, { isStatic: true }),
+       Bodies.rectangle(0, 250, 10, height, { isStatic: true }),
       
-      Bodies.rectangle(300, 250, 10, 500, { isStatic: true }),
+        Bodies.rectangle(width, 250, 10, height, { isStatic: true }),
 ];
   World.add(world, ground);
   //console.log(boxA);
