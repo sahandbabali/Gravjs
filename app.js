@@ -2,11 +2,17 @@
 
 
 
-      window.addEventListener("devicemotion", motion, false);
+window.addEventListener("deviceorientation", handleOrientation, true);
 
 
-function motion(event){
-      document.getElementById("text").textContent = `${event.accelerationIncludingGravity.x} + ${event.accelerationIncludingGravity.y}`;
+ function handleOrientation(event) {
+      var absolute = event.absolute;
+      var alpha    = event.alpha;
+      var beta     = event.beta;
+      var gamma    = event.gamma;
+
+      document.getElementById("text").textContent = `${absolute}, ${alpha}, ${beta}, ${gamma}`;
+      // Do stuff with the new orientation data
     }
 
 
