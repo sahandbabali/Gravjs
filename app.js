@@ -14,7 +14,7 @@ window.addEventListener("deviceorientation", handleOrientation, true);
 
       rotationn = alpha.toFixed(0);
 
-      document.getElementById("text").textContent = `${rotationn}`;
+    //  document.getElementById("text").textContent = `${rotationn}`;
 
 
       engine.world.gravity.x = Math.sin(rotationn);
