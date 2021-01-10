@@ -17,8 +17,8 @@ window.addEventListener("deviceorientation", handleOrientation, true);
       var yg = map(gamma, -90, 90, -1, 1)
 
 
-      engine.world.gravity.x =  xg;
-      engine.world.gravity.y = yg;
+      engine.world.gravity.x =  yg;
+      engine.world.gravity.y = xg;
 
       // Do stuff with the new orientation data
     }
