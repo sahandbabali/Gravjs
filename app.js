@@ -64,16 +64,16 @@ var hhh = 500;
 
 function setup() {
   document.getElementById("grav").addEventListener("click", gravvv);
-  createCanvas(300, 500);
+  createCanvas(windowWidth, windowHeight);
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
   ground = [
-      Bodies.rectangle(150, 0, width, 10, { isStatic: true }),
-      Bodies.rectangle(150, height, width, 10, { isStatic: true }),
-       Bodies.rectangle(0, 250, 10, height, { isStatic: true }),
+      Bodies.rectangle(windowWidth/2, 0, width, 10, { isStatic: true }),
+      Bodies.rectangle(windowWidth/2, height, width, 10, { isStatic: true }),
+       Bodies.rectangle(0, windowHeight/2, 10, height, { isStatic: true }),
       
-        Bodies.rectangle(width, 250, 10, height, { isStatic: true }),
+        Bodies.rectangle(width, windowHeight/2, 10, height, { isStatic: true }),
 ];
   World.add(world, ground);
   //console.log(boxA);
