@@ -17,8 +17,8 @@ window.addEventListener("deviceorientation", handleOrientation, true);
       var yg = map(gamma, -90, 90, -1, 1)
 
 
-      engine.world.gravity.x =  xg;
-      engine.world.gravity.y = yg;
+      engine.world.gravity.x =  yg;
+      engine.world.gravity.y = xg;
 
       // Do stuff with the new orientation data
     }
@@ -69,9 +69,9 @@ function setup() {
   Engine.run(engine);
   ground = [
       Bodies.rectangle(200, 0, 400, 10, { isStatic: true }),
-       Bodies.rectangle(200, 600, 400, 10, { isStatic: true }),
-      Bodies.rectangle(0, 300, 10, 600, { isStatic: true }),
-      Bodies.rectangle(400, 300, 10, 600, { isStatic: true }),
+       Bodies.rectangle(200, 700, 400, 10, { isStatic: true }),
+      Bodies.rectangle(0, 350, 10, 700, { isStatic: true }),
+      Bodies.rectangle(400, 350, 10, 700, { isStatic: true }),
 ];
   World.add(world, ground);
   //console.log(boxA);
