@@ -78,7 +78,7 @@ function setup() {
 }
 
 function mouseDragged() {
-  boxes.push(new Box(mouseX, mouseY, random(40, 50), random(30, 50)));
+  boxes.push(new Box(mouseX, mouseY, random(30, 50), random(40, 50)));
 }
 
 function gravvv() {
