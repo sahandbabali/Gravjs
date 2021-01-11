@@ -63,7 +63,7 @@ var grav = 1;
 
 function setup() {
  // document.getElementById("grav").addEventListener("click", gravvv);
-  createCanvas(400, 700);
+  createCanvas(400, 650);
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
@@ -96,7 +96,7 @@ function draw() {
   background("#C0C0C0");
   stroke("#FF6347");
   noFill();
-  strokeWeight(3);
+  strokeWeight(10);
   for (var i = 0; i < boxes.length; i++) {
     boxes[i].show();
   }
