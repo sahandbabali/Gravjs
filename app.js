@@ -63,22 +63,22 @@ var grav = 1;
 
 function setup() {
  // document.getElementById("grav").addEventListener("click", gravvv);
-  createCanvas(400, 650);
+  createCanvas(400, 660);
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
   ground = [
       Bodies.rectangle(200, 0, 400, 10, { isStatic: true }),
-       Bodies.rectangle(200, 700, 400, 10, { isStatic: true }),
-      Bodies.rectangle(0, 350, 10, 700, { isStatic: true }),
-      Bodies.rectangle(400, 350, 10, 700, { isStatic: true }),
+       Bodies.rectangle(200, 660, 400, 10, { isStatic: true }),
+      Bodies.rectangle(0, 350, 10, 660, { isStatic: true }),
+      Bodies.rectangle(400, 350, 10, 660, { isStatic: true }),
 ];
   World.add(world, ground);
   //console.log(boxA);
 }
 
 function mouseDragged() {
-  boxes.push(new Box(mouseX, mouseY, random(30, 50), random(30, 50)));
+  boxes.push(new Box(mouseX, mouseY, random(40, 50), random(30, 50)));
 }
 
 function gravvv() {
