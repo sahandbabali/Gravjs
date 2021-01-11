@@ -17,8 +17,8 @@ window.addEventListener("deviceorientation", handleOrientation, true);
       var yg = map(gamma, -90, 90, -1, 1)
 
 
-      engine.world.gravity.x =  yg;
-      engine.world.gravity.y = xg;
+      engine.world.gravity.x =  xg;
+      engine.world.gravity.y = yg;
 
       // Do stuff with the new orientation data
     }
@@ -63,7 +63,7 @@ var grav = 1;
 
 function setup() {
  // document.getElementById("grav").addEventListener("click", gravvv);
-  createCanvas(400, 600);
+  createCanvas(400, 700);
   engine = Engine.create();
   world = engine.world;
   Engine.run(engine);
@@ -78,7 +78,7 @@ function setup() {
 }
 
 function mouseDragged() {
-  boxes.push(new Box(mouseX, mouseY, random(10, 30), random(10, 30)));
+  boxes.push(new Box(mouseX, mouseY, random(30, 50), random(30, 50)));
 }
 
 function gravvv() {
@@ -93,8 +93,8 @@ function gravvv() {
 
 function draw() {
   console.log(boxes);
-  background("#2a9d8f");
-  stroke("#e9c46a");
+  background("#C0C0C0");
+  stroke("#FF6347");
   noFill();
   strokeWeight(3);
   for (var i = 0; i < boxes.length; i++) {
